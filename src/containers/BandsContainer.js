@@ -27,26 +27,7 @@ const mapDispatchToProps = dispatch => {
   )
 }
 
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     addRestaurant: (newRestaurant) => {
-//       dispatch(addRestaurant(newRestaurant))
-//     }
-//   };
-// };
-
-const mapStateToProps = ({bands})=> ({
-      bands
-})
-
-// const mapStateToProps = state => {
-//   return {
-//       bands: state.bands
-//   }
-// }
-
-
-
+const mapStateToProps = ({bands})=> ({bands})
 
 export default connect(mapStateToProps, mapDispatchToProps)(BandsContainer)
 // export default BandsContainer

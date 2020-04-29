@@ -8,5 +8,7 @@ export default function manageBand(state = {
         ...state,
         bands: [...state.bands, action.band]
       }
+    default:
+      return state
   }
 };

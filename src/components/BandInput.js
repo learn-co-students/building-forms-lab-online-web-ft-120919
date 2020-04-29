@@ -22,7 +22,7 @@ class BandInput extends Component {
     console.log('state', this.state)
     console.log('band', band)
     this.props.addBand(band)
-    // console.log(this.props.addBand(band))
+    console.log(this.props.addBand(band))
     this.setState({
       name: ''
     })
@@ -47,5 +47,5 @@ class BandInput extends Component {
   }
 }
 
-export default BandInput
-// export default connect(null, { addBand })(BandInput);
+// export default BandInput
+export default connect(null, { addBand })(BandInput);
