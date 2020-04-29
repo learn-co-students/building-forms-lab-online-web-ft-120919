@@ -12,17 +12,17 @@ class BandInput extends Component {
 
   handleOnChange = event => {
     this.setState({
-      [event.target.name]: event.target.value
+      name: event.target.value
     });
   }
 
   handleOnSubmit = event => {
     event.preventDefault()
-    const band = {...this.state}
-    console.log('state', this.state)
-    console.log('band', band)
-    this.props.addBand(band)
-    console.log(this.props.addBand(band))
+    // const band = {...this.state}
+    // console.log('state', this.state)
+    // console.log('band', band)
+    this.props.addBand(this.state)
+    // console.log(this.props.addBand(this.state))
     this.setState({
       name: ''
     })
@@ -47,5 +47,5 @@ class BandInput extends Component {
   }
 }
 
-// export default BandInput
-export default connect(null, { addBand })(BandInput);
+export default BandInput
+// export default connect(null, { addBand })(BandInput);
