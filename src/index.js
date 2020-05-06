@@ -5,7 +5,7 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import manageBand from './reducers/manageBand'
 
-const store = createStore(manageBand)
+const store = createStore(manageBand, window.devToolsExtension ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f)
 
 
 ReactDOM.render(
