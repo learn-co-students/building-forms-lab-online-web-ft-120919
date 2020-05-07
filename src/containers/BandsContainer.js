@@ -4,9 +4,9 @@ import BandInput from '../components/BandInput'
 
 class BandsContainer extends Component {
   renderBands = () => {
-    this.props.bands.map((band, index) => {
+    return this.props.bands.map((band, index) => {
       return <li key={index}>
-        {band}
+        {band.name}
       </li>
     })
   }
